@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kod ishga tushdi</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #0d1117; /* Dasturchilar uchun qulay to'q fon */
+        font-family:
+          "Courier New", Courier, monospace; /* Kod uslubidagi shrift */
+        overflow: hidden;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      .success-text {
+        font-size: 4rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        /* Gradient rang */
+        background: linear-gradient(90deg, #00f2fe, #4facfe, #00f2fe);
+        background-size: 200% auto;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* Animatsiyalar */
+        animation:
+          shine 3s linear infinite,
+          popup 1s ease-out forwards;
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      .subtitle {
+        color: #8b949e;
+        font-size: 1.2rem;
+        margin-top: 20px;
+        opacity: 0;
+        animation: fadein 1s ease-out 0.8s forwards;
+      }
+
+      /* Yaltirash effekti animatsiyasi */
+      @keyframes shine {
+        to {
+          background-position: 200% center;
+        }
+      }
+
+      /* Tepaga ko'tarilib paydo bo'lish animatsiyasi */
+      @keyframes popup {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Sekin paydo bo'lish animatsiyasi */
+      @keyframes fadein {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="success-text">KOD ISHGA TUSHDI</div>
+      <div class="subtitle">Barcha jarayonlar muvaffaqiyatli yakunlandi</div>
+    </div>
+  </body>
+</html>
